@@ -1,9 +1,12 @@
-void output()
+void mergeSort(int low, int high)
 {
-    cout << "\nData setelah diurutkan (Merge Sort): ";
-    for (int i = 0; i < n; i++)
+    if (low >= high)
     {
-        cout << arr[i] << " ";
+        return;
     }
-    cout << endl;
+
+    int mid = (low + high) / 2;
+
+    mergeSort(low, mid);
+    mergeSort(mid + 1, high);
 }
